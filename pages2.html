@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Foro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Foro de Discusión</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a> |
+        <a href="#">Categoría 1</a> |
+        <a href="#">Categoría 2</a>
+    </nav>
+    <div class="container">
+        <h1>Título del Hilo</h1>
+        <p>Este es el primer mensaje en este hilo.</p>
+        <p>Este es el segundo mensaje en este hilo.</p>
+        <p>Este es el tercer mensaje en este hilo.</p>
+        
+        <!-- Formulario para agregar un nuevo mensaje -->
+        <h2>Publicar un nuevo mensaje</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+            <button type="submit">Publicar</button>
+        </form>
+    </div>
+</body>
+</html>

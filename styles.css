@@ -1,0 +1,40 @@
+h1{
+        font-family: Arial, sans-serif;
+        margin : 8;
+        padding : 0;
+        text-align: center     
+  }
+
+#contenedor {
+   
+    width: 700px;
+
+  }
+ #cabecera {text-align: center;
+    background-color: rgb(255, 253, 250);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+  #menu {
+    background-color: rgb(175, 108, 20);
+    float:initial;
+    width: 100px;
+    height: 25px;
+   
+    
+  }
+  #contenido {
+    float: left;
+    width: 550px;
+  }
+  #pie {
+    clear: both;
+  }
+body {background-color: black;
+    background-image : url(images/28454-matrix.jpg);
+    
+
+    
+}
+
+
