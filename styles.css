@@ -5,36 +5,34 @@ h1{
         text-align: center     
   }
 
-#contenedor {
-   
-    width: 700px;
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(168, 60, 168);
+    align-items: center;
+  }
 
-  }
- #cabecera {text-align: center;
-    background-color: rgb(255, 253, 250);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
-  }
-  #menu {
-    background-color: rgb(175, 108, 20);
-    float:initial;
-    width: 100px;
-    height: 25px;
-   
-    
-  }
-  #contenido {
-    float: left;
-    width: 550px;
-  }
-  #pie {
-    clear: both;
-  }
+.logo{
+  display: flex;
+}
+
+.trabajofinal{
+font-family:cursive;
+font-size: x-large;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size:x-large;
+  margin: 10px
+}
+
 body {background-color: black;
     background-image : url(images/28454-matrix.jpg);
-    
-
-    
 }
+
+
 
 
