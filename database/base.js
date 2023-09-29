@@ -6,7 +6,7 @@ const sequelize = new Sequelize('base', 'root','', {
     port: 3306
   });
 
-module.export = {sequelize}
+module.exports = {sequelize}
 
 
 
