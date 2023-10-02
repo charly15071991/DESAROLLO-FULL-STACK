@@ -5,7 +5,10 @@ const base = require("../database/base")
 
 router.get("/"),(req,res) => {
     res.render ("index")
-}
+  }
+
+router.post("/procesar")
+
 
 module.exports = router
 

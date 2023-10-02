@@ -14,11 +14,22 @@ app.use(cors())
 app.use(morgan("dev"))
 app.use(express.json())
 
+app.use(express.urlencoded({extended : false}));
+
+
+app.use(express.static("public"))
+
 app.set("view engine","ejs"); 
+
+
+
+
+
 
 // rutas//
 app.use(require("./routers/router"))
-app.set( 'views',__dirname + "/views")
+app.set( 'views',__dirname + "/src/views")
+
 
 
 
@@ -31,10 +42,9 @@ app.listen(4000,()=> {
 })
 
 
-
-app.set (""); 
 app.get("/",(req,res) => {
-res.render("index");
-})
+  res.render("index");
+  })
+
 
 
