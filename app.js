@@ -29,7 +29,7 @@ app.use(express.static("public"))
 
 //configuracion inicial//
 app.listen(4000,()=> {
-  sequelize.sync({force:false})
+  sequelize.sync({force: false})
 .then(() => 
        console.log('Connection has been established successfully.'))
   .catch(err =>console.log(err))

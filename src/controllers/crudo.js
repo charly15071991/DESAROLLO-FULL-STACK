@@ -1,14 +1,16 @@
 const { tablamod } = require("../models/modelo");
 
+
+
 const allinone = async (req, res) => {
   const todotabla = await tablamod.findAll();
-  res.render("index" , { todotabla});
+  res.render("create" , { todotabla});
 };
 
 
 
 const createtabla = async (req, res) => {
-  res.render("create");
+  res.render("index");
 };
 
 
