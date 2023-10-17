@@ -1,17 +1,59 @@
-const control= {};
-control.list =( req,res) => {
-    res.get ("hola desde el control")
+const { tablamod } = require("../models/modelo");
 
-}
-
-control.dato =(req,res) =>{
-req.getconnection ((err,conn) =>{
-    conn.query ("in")
-})
-
-}
+const allinone = async (req, res) => {
+  const todotabla = await tablamod.findAll();
+  res.render("index" , { todotabla});
+};
 
 
 
+const createtabla = async (req, res) => {
+  res.render("create");
+};
 
-module.exports = control
+
+
+const newupdate = async (req, res) => {
+  const placeId = req.params.id;
+  const place = await tablamod.findByPk(placeId);
+  if (!place) {
+    return res.redirect("/");
+  }
+  res.render("updates", { place });
+};
+
+
+
+const updatetabla = async (req, res) => {
+  const { id, title, texto, imagen } = req.body;
+  const place = await tablamod.findByPk(id);
+  await place.update({ title, texto, imagen });
+  res.redirect("/");
+};
+
+
+
+const  newtabla = async (req, res) => {
+  const { title, texto, imagen } = req.body;
+  await tablamod.create({ title, texto,imagen });
+  res.redirect("/");
+};
+
+
+
+const deletetabla = async (req, res) => {
+  const placeId = req.params.id;
+  const place = await tablamod.findByPk(placeId);
+  await place.destroy();
+  res.redirect("/");
+};
+
+module.exports = {
+    allinone,
+    createtabla,
+    updatetabla,
+    newtabla,
+    newupdate,
+    deletetabla,
+
+};
